@@ -16,7 +16,7 @@
      newWithImage:image
      attributes:{
         {
-            @selector(setContentMode:), @(UIViewContentModeScaleToFill)
+            @selector(setContentMode:), @(UIViewContentModeScaleAspectFit)
         },
         {
             @selector(setBackgroundColor:), [UIColor whiteColor]

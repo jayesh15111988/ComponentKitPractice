@@ -40,12 +40,12 @@
     }];
 
     for (CKImageComponent * imageComponent in imageComponents) {
-        subComponents.push_back({imageComponent, .spacingBefore = 2.0});
+        subComponents.push_back({imageComponent, .spacingBefore = -1.0});
     }
 
     subComponents.push_back({whoLikedLabelComponent, .spacingBefore = 5.0});
 
-    CKFlexboxComponent *whoLikesFlexBoxComponent = [CKFlexboxComponent newWithView:{} size:{} style:{
+    CKFlexboxComponent *whoLikedFlexBoxComponent = [CKFlexboxComponent newWithView:{} size:{} style:{
         .direction = CKFlexboxDirectionRow,
         .justifyContent = CKFlexboxJustifyContentSpaceEvenly,
         .alignItems = CKFlexboxAlignItemsCenter
@@ -96,7 +96,7 @@
         .justifyContent = CKFlexboxJustifyContentSpaceBetween,
         .wrap = CKFlexboxWrapWrap
     } children:{
-        {whoLikesFlexBoxComponent},
+        {whoLikedFlexBoxComponent},
         {shareCommentsFlexBoxComponent}
     }];
 

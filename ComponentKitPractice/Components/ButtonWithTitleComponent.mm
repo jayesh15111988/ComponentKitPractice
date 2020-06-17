@@ -7,6 +7,7 @@
 //
 
 #import "ButtonWithTitleComponent.h"
+#import "Constants.h"
 #import <ComponentKit/CKComponentSubclass.h>
 
 @implementation ButtonWithTitleComponent {
@@ -23,9 +24,12 @@
 
     UIImage *finalImage = isHighlighted ? highlightedImage : image;
 
-    CKButtonComponent* buttonComponent = [CKButtonComponent newWithAction:@selector(buttonTapped) options: { .images = {finalImage}, .titleAlignment = NSTextAlignmentLeft, .size = {30, 30} }];
+    CKButtonComponent* buttonComponent = [CKButtonComponent newWithAction:@selector(buttonTapped) options: {
+        .images = {finalImage}, .titleAlignment = NSTextAlignmentLeft, .size = {30, 30},
+        .tapTargetExpansion = {.right = -5}
+    }];
 
-    UIColor *titleColor = isHighlighted ? [UIColor colorWithRed:0.26 green:0.404 blue:0.7 alpha:1.0] : [UIColor blackColor];
+    UIColor *titleColor = isHighlighted ? Constants.blueColor : [UIColor blackColor];
 
 //    CKLabelComponent *labelComponent = [CKLabelComponent
 //    newWithLabelAttributes:{

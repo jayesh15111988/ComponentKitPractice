@@ -11,6 +11,7 @@
 #import "PostContext.h"
 #import "PostsController.h"
 #import "MainPostComponent.h"
+#import "Constants.h"
 #import <ComponentKit/ComponentKit.h>
 
 @interface ViewController ()<CKComponentProvider, UICollectionViewDelegateFlowLayout>
@@ -36,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.collectionView.backgroundColor = [UIColor colorWithRed:0.96 green:0.964 blue:0.98 alpha:1.0];
+    self.collectionView.backgroundColor = Constants.backgroundColor;
     self.collectionView.delegate = self;
 
     const CKSizeRange sizeRange = [_sizeRangeProvider sizeRangeForBoundingSize:self.collectionView.bounds.size];

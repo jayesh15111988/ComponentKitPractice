@@ -13,6 +13,7 @@
 #import "BottomButtonsRowComponent.h"
 #import "PostIdentifyComponent.h"
 #import "ReactionCommentsComponent.h"
+#import "Constants.h"
 #import "ImageComponent.h"
 
 @implementation InnerComponent
@@ -50,7 +51,7 @@ static CKComponent *horizontalComponent() {
     CKComponent *lineComponent = [CKComponent newWithView:{
         [UIView class],
         {
-            {@selector(setBackgroundColor:), [UIColor colorWithRed:0.96 green:0.964 blue:0.98 alpha:1.0]}
+            {@selector(setBackgroundColor:), Constants.lightGrayColor}
         }
     } size:{.height = 1}];
 
